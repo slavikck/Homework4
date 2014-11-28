@@ -93,7 +93,7 @@ if(!class_exists('Post_Type_Template'))
 		public function add_inner_meta_boxes($post)
 		{		
 			// render the job order metabox
-			include(sprintf("%s/../templates/%s_metabox.php", dirname(__FILE__), self::POST_TYPE));			
+			include(sprintf("%s/../templates/%s_metabox.php", dirname(__FILE__), self::POST_TYPE));
 		}
 
 	}

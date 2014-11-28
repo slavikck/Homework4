@@ -10,7 +10,7 @@ if(!class_exists('Arzamath_17th_Settings'))
             add_action('admin_init', array(&$this, 'admin_init'));
         	add_action('admin_menu', array(&$this, 'add_menu'));
 		}
-		
+
         //hook into WP's admin_init action hook
         public function admin_init()
         {
@@ -70,11 +70,7 @@ if(!class_exists('Arzamath_17th_Settings'))
             $field = $args['field2'];
             $value = get_option($field);
 
-            echo sprintf('<select size="1" name="dropdown-list">
-                            <option value="1">11111111111111111111</option>
-                            <option value="2">22222222222222222222</option>
-                            <option value="3">33333333333333333333</option>
-                          </select>', $field, $field, $value);
+            echo sprintf('<input type="text" name="%s" id="%s" value="%s" />', $field, $field, $value);
         }
 
         // add a menu and page to manage this plugin settings
